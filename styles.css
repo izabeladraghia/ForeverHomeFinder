@@ -1,0 +1,89 @@
+/* Resetting some default styles */
+body, h1, h2, h3, p, ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #333;
+    color: white;
+}
+
+#logo {
+    height: 50px;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    gap: 15px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - [HeaderHeight] - [FooterHeight]); /* Adjust this according to your header and footer height */
+}
+
+.welcome-message {
+    font-size: 3rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+.animal-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;  /* Spacing between boxes */
+}
+
+.animal-box {
+    position: relative;
+    width: calc(33.33% - 20px); /* Width of each box minus the gap */
+    overflow: hidden; /* To ensure the name overlay doesn't overflow */
+}
+
+.animal-image {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s; /* For a zoom effect on hover */
+}
+
+.animal-box:hover .animal-image {
+    transform: scale(1.1); /* Zoom in effect on hover */
+}
+
+.animal-name {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black */
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    transform: translateY(100%); /* Initially, hide the name */
+    transition: transform 0.3s;
+}
+
+.animal-box:hover .animal-name {
+    transform: translateY(0); /* Reveal the name on hover */
+}

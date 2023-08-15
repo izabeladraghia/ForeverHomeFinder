@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[Page Title]</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <img src="path_to_logo.png" alt="Website Logo" id="logo">
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="animals.html">Animals</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="login.html">Login/Register</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="animal-grid">
+        {% for animal in animals %}
+            <div class="animal-box">
+                <img src="{{ animal.image_url }}" alt="{{ animal.name }}" class="animal-image">
+                <div class="animal-name">{{ animal.name }}</div>
+            </div>
+        {% endfor %}
+        </div>
+    </main>
+    
+    <footer>
+        <!-- You can add footer information later if you wish -->
+    </footer>
+</body>
+
+</html>
