@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ForeverHomeFinder</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+
+<body>
+    <header>
+        <img src="{{ url_for('static', filename='assets/logo.png')}}" alt="Website Logo" id="logo">
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('index') }}">Home</a></li>
+                <li><a href="{{ url_for('about') }}">About</a></li>
+                <li><a href="{{ url_for('animals') }}">Animals</a></li>
+                <li><a href="{{ url_for('contact') }}">Contact</a></li>
+                <!-- <li><a href="login.html">Login/Register</a></li> -->
+            </ul>
+        </nav>
+    </header>
+    <main>
+    
+        <section class="about-section">
+            <h2>About Forever Home Finder 🐾</h2>
+            
+            <p>Welcome to <span class="shelter-name">Forever Home Finder</span>, where every whisker, wag, and chirp finds a beacon of hope. Founded in <span class="founded-year">2022</span>, our mission has always been clear - to rescue, rehabilitate, and rehome animals in need.</p>
+        
+            <h3>Our Philosophy</h3>
+            <p>Every animal, irrespective of its breed, age, or history, deserves love, care, and a place to call home. Through our efforts, we've seen the transformative power of adoption. It doesn't just change the lives of these pets; it enriches the lives of their new families too.</p>
+        
+            <h3>Our Journey</h3>
+            <p>Since our inception, we've had the honor of finding forever homes for over <span class="animals-number">42</span> animals and counting. Each story, from a timid rescue blossoming in a loving environment to families finding their perfect furry companion, is a testament to the importance of our cause.</p>
+        
+            <h3>Team & Facilities</h3>
+            <p>Our dedicated team of <span class="team-size">12</span> staff and countless volunteers work tirelessly, ensuring that every animal under our care receives top-notch attention, medical care, and training. Our state-of-the-art facilities are equipped to cater to the diverse needs of various animals, from playful puppies to serene senior cats, ensuring they are in the best health and spirits before finding their forever home.</p>
+        
+            <h3>Join Our Cause</h3>
+            <p>Whether you're looking to adopt, volunteer, or donate, there's always a way you can make a difference. Explore our website to learn more about our adoption process, success stories, upcoming events, and how you can contribute to this heartwarming journey of love and companionship.</p>
+        </section>
+        
+    </main>
+    <footer>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ForeverHomeFinder</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+
+<body>
+    <header>
+        <img src="{{ url_for('static', filename='assets/logo.png')}}" alt="Website Logo" id="logo">
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('index') }}">Home</a></li>
+                <li><a href="{{ url_for('about') }}">About</a></li>
+                <li><a href="{{ url_for('animals') }}">Animals</a></li>
+                <li><a href="{{ url_for('contact') }}">Contact</a></li>
+                <!-- <li><a href="login.html">Login/Register</a></li> -->
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="welcome-message">
+            Welcome to Forever Home Finder!
+        </div>
+    </main>
+    <footer>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ForeverHomeFinder</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+
+<body>
+    <header>
+        <img src="{{ url_for('static', filename='assets/logo.png')}}" alt="Website Logo" id="logo">
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('index') }}">Home</a></li>
+                <li><a href="{{ url_for('about') }}">About</a></li>
+                <li><a href="{{ url_for('animals') }}">Animals</a></li>
+                <li><a href="{{ url_for('contact') }}">Contact</a></li>
+                <!-- <li><a href="login.html">Login/Register</a></li> -->
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="contact-section">
+            <h2>Contact Us</h2>
+            <p>We're here to answer any questions you might have. Please reach out to us using the details below, or fill out the contact form.</p>
+            
+            <div class="contact-details">
+                <div>
+                    <h3>Address</h3>
+                    <p>Brasov, Street Mircea Eliade, Nr. 31 , ZIP CODE 500250</p>
+                </div>
+                
+                <div>
+                    <h3>Phone</h3>
+                    <p><a href="tel:+0774669412">0774669412</a></p>
+                </div>
+                
+                <div>
+                    <h3>Email</h3>
+                    <p><a href="mailto: foreverhomefiner@gmail.com">foreverhomefinder@gmail.com</a></p>
+                </div>
+            </div>
+            
+            <div class="contact-form">
+                <h3>Get in Touch</h3>
+                <form action="submit_form.php" method="post">
+                    <label for="name">Full Name:</label>
+                    <input type="text" id="name" name="name" required>
+                    
+                    <label for="email">Email Address:</label>
+                    <input type="email" id="email" name="email" required>
+                    
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                    
+                    <button type="submit">Send Message</button>
+                </form>
+            </div>
+        </section>
+
+    </main>
+    <footer>
+    </footer>
+</body>
+
+</html>
