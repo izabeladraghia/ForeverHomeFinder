@@ -92,6 +92,22 @@ def animals():
     
     return render_template('animals.html', animals=animals)
 
+@app.route('/animal/<int:animal_id>')
+def animaldescription(animal_id):
+    connection = get_db_connection()
+    cursor = connection.cursor()
+
+    cursor.execute("SELECT * FROM `foreverhomefinder`.`animals` WHERE AnimalId=%s", (animal_id,))
+    animal = cursor.fetchone()
+
+    connection.close()
+    
+    if animal:
+        return render_template('animaldescription.html', animal=animal)
+    else:
+        return "Animal not found", 404
+
+
 @app.route('/about')
 def about():
     return render_template('about.html')

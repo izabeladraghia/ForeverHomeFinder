@@ -110,7 +110,7 @@ main {
 
 .animal-image {
     width: 100%;
-    height: auto;
+    height: 450px;
     transition: transform 0.3s; 
 }
 
@@ -133,7 +133,10 @@ main {
 
 .animal-box:hover .animal-name {
     transform: translateY(0); 
-}
+} 
+
+
+
 
 .contact-section {
     font-size: 1rem;
@@ -247,3 +250,29 @@ main {
 .contact-form button:active {
     transform: translateY(0);
 }
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 800px;
+    margin: 50px auto;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+
+.animal-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+}
+

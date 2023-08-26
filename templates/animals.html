@@ -24,10 +24,14 @@
     <main>
         <div class="animal-grid">
         {% for animal in animals %}
-            <div class="animal-box">
+        <div class="animal-box">
+            <a href="{{ url_for('animaldescription', animal_id=animal.AnimalId) }}">
                 <img src="{{ url_for('static', filename='assets/' + animal.AnimalImage) }}" alt="{{ animal.AnimalName }}" class="animal-image">
-                <div class="animal-name">{{ animal.AnimalName }}</div>
+            </a>
+            <div class="animal-name">
+                <a href="{{ url_for('animaldescription', animal_id=animal.AnimalId) }}">{{ animal.AnimalName }}</a>
             </div>
+        </div>
         {% endfor %}
         </div>
     </main>
