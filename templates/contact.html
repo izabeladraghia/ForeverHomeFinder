@@ -29,23 +29,23 @@
             <div class="contact-details">
                 <div>
                     <h3>Address</h3>
-                    <p>Brasov, Street Mircea Eliade, Nr. 31 , ZIP CODE 500250</p>
+                    <p>Brasov, Street Mircea Eliade, Nr. 31 , 500250</p>
                 </div>
                 
                 <div>
                     <h3>Phone</h3>
-                    <p><a href="tel:+0774669412">0774669412</a></p>
+                    <p><a href="tel:+0774669412">0772123123</a></p>
                 </div>
                 
                 <div>
                     <h3>Email</h3>
-                    <p><a href="mailto: foreverhomefiner@gmail.com">foreverhomefinder@gmail.com</a></p>
+                    <p><a href="mailto: foreverhomefiner2023@gmail.com">foreverhomefinder2023@gmail.com</a></p>
                 </div>
             </div>
             
             <div class="contact-form">
                 <h3>Get in Touch</h3>
-                <form action="submit_form.php" method="post">
+                <form action="{{ url_for('submit_contact') }}" method="post">
                     <label for="name">Full Name:</label>
                     <input type="text" id="name" name="name" required>
                     
@@ -57,12 +57,12 @@
                     
                     <button type="submit">Send Message</button>
                 </form>
+                {% if request.args.get('message') == 'sent' %}
+                <p class="success-message">Message sent. Thank you for contacting us!</p>
+                {% endif %}
             </div>
         </section>
-
     </main>
-    <footer>
-    </footer>
 </body>
 
 </html>

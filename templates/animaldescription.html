@@ -21,20 +21,28 @@
             </ul>
         </nav>
     </header>
-    <main>
+    <main class="animal-description">
+        <img src="{{ url_for('static', filename='assets/' + animal.AnimalImage) }}" alt="{{ animal.AnimalName }}" class="description-image">
         <h1>{{ animal.AnimalName }}</h1>
-        <img src="{{ url_for('static', filename='assets/' + animal.AnimalImage) }}" alt="{{ animal.AnimalName }}" class="animal-image">
-        <ul>
-            <li><strong>ID:</strong> {{ animal.AnimalId }}</li>
-            <li><strong>Name:</strong> {{ animal.AnimalName }}</li>
-            <li><strong>Type:</strong> {{ animal.AnimalType }}</li>
-            <li><strong>Age:</strong> {{ animal.AnimalAge }}</li>
-            <li><strong>Breed:</strong> {{ animal.AnimalBreed }}</li>
-        </ul>
-        <a href="{{ url_for('animals') }}">Back to Animals</a>
+        <p><strong>Type:</strong> {{ animal.AnimalType }}</p>
+        <p><strong>Breed:</strong> {{ animal.AnimalBreed }}</p>
+        <p><strong>Age:</strong> {{ animal.AnimalAge }}</p>
+        <label for="visit_time">Choose a time to visit:</label>
+        <form action="{{ url_for('animaldescription', animal_id=animal.AnimalId) }}" method="post">
+            <!-- Dropdown for scheduling -->
+            <select class="custom-dropdown" name="selected-time">
+                {% for time_slot in available_times %}
+                    <option value="{{ time_slot }}">{{ time_slot }}</option>
+                {% endfor %}
+            </select>
+        
+            <button class="schedule-btn" type="submit">Schedule Visit</button>
+        </form>
+        <form action="{{ url_for('delete_animal', animal_id=animal.AnimalId) }}" method="post">
+            <button type="submit" class="delete-button">Delete</button>
+        </form>
+        <a href="{{ url_for('animals') }}" class="back-to-animals">Back to Animals</a>
     </main>
-    <footer>
-    </footer>
 </body>
 
 </html>

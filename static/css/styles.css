@@ -23,7 +23,6 @@ header {
 
 #logo {
     height: 50px;
-    /* color: white; */
 }
 
 nav ul {
@@ -64,9 +63,6 @@ main {
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
     backdrop-filter: blur(5px); 
 }
-
-
-
 
 .about-section {
     font-size: 1rem;
@@ -118,25 +114,33 @@ main {
     transform: scale(1.1); 
 }
 
-.animal-name {
+.animal-name a {
     position: absolute;
     bottom: 0;
     left: 0;
     width: 100%;
-    background-color: rgba(0, 0, 0, 0.7); 
+    display: block;
+    background-color: rgba(0, 0, 0, 0.85); 
     color: white;
+    text-decoration: none;
     text-align: center;
     padding: 10px 0;
-    transform: translateY(100%); 
+    transform: translateY(100%);
     transition: transform 0.3s;
 }
 
-.animal-box:hover .animal-name {
-    transform: translateY(0); 
-} 
+.animal-box:hover .animal-name a {
+    transform: translateY(0);
+}
 
+.animal-name a:visited {
+    color: white;
+}
 
-
+.animal-name a:hover, .animal-name a:focus {
+    color: white;
+    text-decoration: none;
+}
 
 .contact-section {
     font-size: 1rem;
@@ -276,3 +280,132 @@ body {
     margin-bottom: 20px;
 }
 
+/* styling for the animal description page */
+.animal-description {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px 0;
+}
+
+.description-image {
+    width: 700px;
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    margin-bottom: 30px;
+}
+
+.animal-description h1 {
+    font-size: 2rem;
+    color: #4c67a1;  /* Using the deep, rich blue for the animal name */
+    margin-bottom: 20px;
+}
+
+.animal-description p {
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.back-to-animals {
+    margin-top: 20px;
+    display: inline-block;
+    padding: 10px 20px;
+    color: #fff;
+    background-color: #4c67a1; /* Using the deep, rich blue */
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.back-to-animals:hover {
+    background-color: #3a5385;
+}
+
+.delete-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    color: #fff;
+    background-color: #FF4136; /* Red color */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.delete-button:hover {
+    background-color: #E70F00; /* Darker red on hover */
+}
+
+/* styling for the add form */
+.animal-add-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    max-width: 400px;
+    margin: 50px auto;
+}
+
+.animal-add-form input[type="text"],
+.animal-add-form input[type="number"],
+.animal-add-form input[type="file"],
+.animal-add-form input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.animal-add-form input[type="submit"] {
+    background-color: #4c67a1;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.animal-add-form input[type="submit"]:hover {
+    background-color: #3a5385;
+}
+
+/* styling for the add button */
+.add-animal-btn {
+    display: inline-block;
+    padding: 15px 25px;
+    background-color: #4c67a1;
+    color: #fff;
+    border-radius: 5px;
+    font-size: 24px;
+    text-decoration: none;
+    margin: 20px auto;
+    transition: background-color 0.3s ease;
+}
+
+.add-animal-btn:hover {
+    background-color: #3a5385;
+}
+
+.custom-dropdown {
+    width: 200px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.schedule-btn {
+    background-color: #007BFF;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.schedule-btn:hover {
+    background-color: #0056b3;
+}

@@ -22,9 +22,16 @@
         </nav>
     </header>
     <main>
+        <form action="{{ url_for('insert_animal') }}" method="post" enctype="multipart/form-data" class="animal-add-form">
+            <input type="text" name="animalName" placeholder="Animal Name" required>
+            <input type="text" name="animalType" placeholder="Animal Type" required>
+            <input type="number" name="animalAge" placeholder="Animal Age" required>
+            <input type="text" name="animalBreed" placeholder="Animal Breed" required>
+            <input type="file" name="animalImage" required>
+            <input type="submit" value="Add Animal">
+            <a href="{{ url_for('animals') }}" class="back-to-animals">Back to Animals</a>
+        </form>
     </main>
-    <footer>
-    </footer>
 </body>
 
 </html>
