@@ -35,7 +35,7 @@ Follow these steps to get the web application running on your local machine:
     pip install python-dotenv
     ```
 
-4. **Add Credentials**:
+3. **Add Credentials**:
 
    Set up the necessary credentials, for example:
    - `MAIL_USERNAME`: Email Address
@@ -43,14 +43,13 @@ Follow these steps to get the web application running on your local machine:
    - `DB_HOST`: Database Host
    - `DB_USER`: Database User
    - `DB_PASSWORD`: Database Password
-    ```
 
-6. **Create the database**:
+4. **Create the database**:
     ```bash
     python database.py
     ```
 
-6. **Run the Application**:
+5. **Run the Application**:
     ```bash
     python app.py
     ```
